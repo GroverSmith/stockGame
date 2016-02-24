@@ -1,0 +1,97 @@
+==== Name ideas
+dirty deals
+filthy insiders
+
+
+===== Base mechanics
+* game divided into rounds. each round has the following sequence:
+  - news cycle
+  - buy/sell (all players in turn order)
+  - player turns (all players take one action in turn order)
+  - investigation!
+  - cleanup
+
+---- Setup
+* market with X (8?) stocks - represent by numbered poker cards 2-9
+* market divided into Y (4?) segments - represented by poker face cards (J:2+3, Q:4+5, K:6+7, A:8+9)
+* all poker cards (including jokers) shuffled into one news deck
+* stocks are recorded with starting share prices equal to 10*D6
+* stocks are recorded with starting share pool of 50*D6 shares
+* players start with $1000
+* a deck of action cards is shuffled. All players draw a starting hand (3?).
+* each player is assigned a number (1-6) for use in investigations phases
+
+---- News Cycle
+* draw and reveal Z (3?) cards.
+* if card is red, matching stock(s) goes down in value by D6 (maybe 2D6?)
+* if card is black, matching stock(s) go up in value by D6 (maybe 2D6?)
+* if card is big joker, increase all stocks by 2D6 (roll separate for each sector)  
+* if card is small joker, decrease all stocks by 3D6 (roll separate for each sector): NOTE: crash worse than surge?
+*** need some mechanic to re-shuffle the news deck before it runs out. This also has the minor effect of screwing someone who looked at or manipulated the upcoming news.
+
+---- Buy/Sell/Trade
+* each player can buy/sell any amount of stock they have with the market
+* players can trade with each other in off-market deals
+
+---- Player turn
+* draw one action card.
+* play one action, selecting one of these options:
+  - play a "planned action" card into your run. This causes the card at the end of your run to take effect immediately, or to be placed face down in your "master plan" pool.
+  - play an "unplanned action" card directly from your hand.
+  - play any number of cards from your master plan pool.
+* insider trading. can buy or sell stocks after the action, but doing so earns you 2 "dirty deal" counters for insider trading.
+
+
+---- Action cards
+*** some action cards come with a "dirty deal" indicator, gaining you a number of dirty deal counters when you play it.
+* plant evidence: gain one dirty token and give 3 to someone else + 1 dirty token per master plan booster
+* marketing campaign: increase value of selected stock by 2D6 +1D6 per master plan booster
+
+
+---- Investigation
+* each player is assigned a number 1-6
+* determine investigation target: roll 1D6. if it matches the number of a player, that player is investigated
+* determine investigation threshold: roll 1D6. if the number rolled is equal to or less than the number of dirty deal counters the player has, that player has been caught in a dirty deal and is immediately punished.
+* after receiving punishment, player removes one dirty deal token and repeats the investigation threshold/punishment cycle until they roll below their number of dirty deal tokens. All punishments are cumulative
+* punishments may be relative to the number of dirty deal tokens the player has. It may include one or more of the following:
+  - a monetary fine 
+  - forfeiture of some number of stocks
+  - loss of one or more cards from the master plan pool
+  - loss of one or more cards from the run
+  - loss of one or more cards from the hand
+
+
+----- Cleanup
+* each player discards one dirty deal counter
+* dividends are paid. These may come from majority share holder abilities, card effects, or the properties of certain stocks.
+
+
+
+===== Majority Shareholder
+* any player who holds more than 50% of a stock's shares is majority share holder.
+* for each company which you are majority shareholder, you get one benefit (maybe determined by the company, maybe random, maybe selected by the player)
+  -- draw extra card each turn (and discard one?)
+  -- dispose of an extra dirty deal counter each turn
+  -- receive 1 less dirty deal token for insider trading
+  -- receive 1 less dirty deal token for action cards (maybe only for certain type of action cards) 
+  -- re-roll the investigation target dice
+  -- re-roll the investigation threshold dice
+  -- add one to the investigation threshold
+  -- subtract one from investigation threshold.
+  -- discard one news item before it takes effect
+  -- look at the top 3 news items in the deck and discard any you want.
+  -- reverse a red news item to a black
+  -- reverse a black news item to a red
+  -- influence the investigation punishment in some way
+  -- receive a dividend in the cleanup phase of each turn
+
+
+===== Random thoughts
+* how is the player order determined? Play order has some value and so this choice may be important. Play order may not be as important if the legal buy phase for everyone comes before any player's action turn
+* do we need a way for hidden parties (non-player) to hold shares? To model buy-backs and no option to gain majority share
+* do we want to use jokers in the news deck to be some major event? Maybe they are market-wide surges or crashes. 
+* should the benefit of being majority share holder vary by company? maybe it's part of the company card
+* maybe have a stack of company cards with funny company names, initial IPO price, share pool, majority share holder benefit, market segment, etc.
+* maybe some stocks have a chance to pay a dividend at the end of each turn, such as a 1 in 6 chance to pay out $10/share. When a dividend is paid, maybe the stock price automatically goes down by 1 notch?  
+
+
