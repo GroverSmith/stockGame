@@ -1,7 +1,15 @@
 ==== Name ideas
 dirty deals
 filthy insiders
+dirty insiders
 
+==== Terminology:
+2d6 means roll 2 six sided dice and take the sum of the roll.
+2d6+1 means roll 2 six sided dice and take the sum of the roll plus one.
+2d6+1d6/R means roll 2 six sided dice plus another six sided dice for every resource played.
+1/R means one per resource played as part of a master plan.
++1DD means gain one dirty deal token
+3DD+1/R means gain one dirty deal token plus one for every resource played.
 
 ===== Base mechanics
 * game divided into rounds. each round has the following sequence:
@@ -11,23 +19,33 @@ filthy insiders
   - investigation!
   - cleanup
 
+* cash vs stocks. 
+  - cash is liquid. any effect that requires you to pay cash may only be activated if you have the required amount of cash on hand.   
+  
 ---- Setup
 * market with X (8?) stocks - represent by numbered poker cards 2-9
 * market divided into Y (4?) segments - represented by poker face cards (J:2+3, Q:4+5, K:6+7, A:8+9)
 * all poker cards (including jokers) shuffled into one news deck
-* stocks are recorded with starting share prices equal to 10*D6
-* stocks are recorded with starting share pool of 50*D6 shares
+* stocks are recorded with starting share prices equal to 10*d6
+* stocks are recorded with starting share pool of 50*d6 shares
 * players start with $1000
 * a deck of action cards is shuffled. All players draw a starting hand (3?).
 * each player is assigned a number (1-6) for use in investigations phases
+* each player has a "plan" area, which is a series of cards played face down. The plan has a start end and a complete end. 
+  Scheme cards are played into the start end, pushing all cards in the plan forward by one space. 
+  Any card entering the complete space is played immediately, or placed face down into the master plan pool.
+* each player has a master plan pool, which is zero or one face down scheme card (the master plan) and a stack of zero or more scheme cards (resources)
 
 ---- News Cycle
 * draw and reveal Z (3?) cards.
-* if card is red, matching stock(s) goes down in value by D6 (maybe 2D6?)
-* if card is black, matching stock(s) go up in value by D6 (maybe 2D6?)
-* if card is big joker, increase all stocks by 2D6 (roll separate for each sector)  
-* if card is small joker, decrease all stocks by 3D6 (roll separate for each sector): NOTE: crash worse than surge?
+* if card is red, matching stock(s) goes down in value by d6 (maybe 2d6?)
+* if card is black, matching stock(s) go up in value by d6 (maybe 2d6?)
+* if card is big joker, increase all stocks by 2d6 (roll separate for each sector)  
+* if card is small joker, decrease all stocks by 3d6 (roll separate for each sector): NOTE: crash worse than surge?
 *** need some mechanic to re-shuffle the news deck before it runs out. This also has the minor effect of screwing someone who looked at or manipulated the upcoming news.
+
+-- news cards:
+* company buy-back: randomly select an entity (stock only). reduce number of available shares by 10*d6 and increase the price by 2d6. if there are insufficient shares in the market supply, players have the opportunity to immediately sell at the new price until the buyback amount is met (divide opportunity evenly between all share holders).
 
 ---- Buy/Sell/Trade
 * each player can buy/sell any amount of stock they have with the market
@@ -35,30 +53,57 @@ filthy insiders
 
 ---- Player turn
 * draw one action card.
-* play one action, selecting one of these options:
-  - play a "planned action" card into your run. This causes the card at the end of your run to take effect immediately, or to be placed face down in your "master plan" pool.
-  - play an "unplanned action" card directly from your hand.
-  - play any number of cards from your master plan pool.
+* play one action, selecting *ONE* of these options:
+  - Scheme: play a "scheme" card into your plan. This causes the card at the end of your plan to take effect immediately, or to be placed face down in your "master plan" pool.
+      >> any scheme card played into the master plan area must either go into the resources pile or into the master plan space. 
+      >> If played into the master plan space, any existing card in that space is discarded without effect.
+  - play an "opportunity" card directly from your hand.
+  - play your master plan card and any number of cards from the resources pile.
 * insider trading. can buy or sell stocks after the action, but doing so earns you 2 "dirty deal" counters for insider trading.
 
 
 ---- Action cards
+*** action cards have one of the following types:
+  - scheme: these cards must be played into the start of your plan. They only take effect when they arrive at the complete end of the plan, or are played as a master plan from the master plan space.
+  - opportunity: these cards can be played directly out of your hand during your turn.
+  - disruption: these cards can be played directly out of your hand at any time, including during other player's turn.
 *** some action cards come with a "dirty deal" indicator, gaining you a number of dirty deal counters when you play it.
-* plant evidence: gain one dirty token and give 3 to someone else + 1 dirty token per master plan booster
-* marketing campaign: increase value of selected stock by 2D6 +1D6 per master plan booster
+*** unless otherwise marked, every scheme card is worth one resource when in the resouce pile
+* plant evidence (scheme): +1DD+1/R. Give 3DD+2/R to another player.
+* marketing campaign (scheme): increase value of selected stock by 2d6+1d6/R 
+* smear campaign (scheme): decrease value of selected stock by 3d6+1d6/R
+* hostile takeover (scheme): force another player to immediately sell (2d6+1d6/R)*10 shares of a stock of your choice to you at current market price.
+* blackmail (scheme): +3DD+1/R. force a player to give you 5d6+2d6/R shares of a stock of your choice.
+* frivolous lawsuit (scheme): select another player. that player may elect to settle out of court by giving you 3d6+1d6/R shares of a stock of your choice. If they do not settle, determine the court outcome by rolling 2D6. If the result is 9 or more, the player pays you (2d6+1d6/R)*10 shares of a stock of your choice and all stocks which the player is majority shareholder immediately fall in price by 2d6. Before the roll, the player may pay 10K cash (if they have it on hand) to hire a crack law firm to grant them one re-roll of the court decision.
+* shell corporation (scheme): +1DD. buy and sell any number of stocks during the next 2 insider trading phases without gaining any DD tokens.
+* price manipulation (scheme): +3DD. Select a stock for which you are the majority shareholder. Immediately adjust the price of that stock up or down by 5d6+1d6/R. 
 
+* buy immunity (opportunity): you may immediately discard any number of DD tokens by paying 1d6*100 cash for each (roll once).
+* flee the country (opportunity): take no other action during your turn (no insider trading or any other action). Ignore any investigation that targets you this turn.
+* moment of celebrity (opportunity): immediately discard 1d6 DD tokens.
+* unsactioned trading (opportunity): +4DD. Immediately buy or sell any amount of a single stock in a black market deal. For this trade, treat the price as 3d6 lower or higher (your choice) than the current market value.
+* accelerated plans (opportunity): immediately play 2 scheme cards into your plan.
+* fortunate opening (opportunity): immediately play your master plan with +3R. You may still spend additional resources from your resouce pool as well.
+
+* sieze the initiative (disruption): can only play this if you have not yet played an action turn this round. Play at the start of another player's turn before they begin. Take your turn now. Normal turn play resumes after your turn (you do not play another turn this round.)
+* corporate sabotage (disruption): discard a card just played by another player before it takes effect. If the player played a master plan with resources, discard up to 2 of the resources (do not discard the master plan). If played on a master plan with no remaining resources, discard the master plan.
+* whistle-blower (disruption): play immediately after the investigation target roll. select one player not being investigated to be the target of a second investigation this turn.
+* suppress evidence (disruption): +2DD. subtract 7 from the next investigation threshold roll.
 
 ---- Investigation
 * each player is assigned a number 1-6
-* determine investigation target: roll 1D6. if it matches the number of a player, that player is investigated
-* determine investigation threshold: roll 1D6. if the number rolled is equal to or less than the number of dirty deal counters the player has, that player has been caught in a dirty deal and is immediately punished.
+* determine investigation target: roll 1d6. if it matches the number of a player, that player is investigated
+* determine investigation threshold: roll 1d6. if the number rolled is equal to or less than the number of dirty deal counters the player has, that player has been caught in a dirty deal and is immediately punished.
 * after receiving punishment, player removes one dirty deal token and repeats the investigation threshold/punishment cycle until they roll below their number of dirty deal tokens. All punishments are cumulative
 * punishments may be relative to the number of dirty deal tokens the player has. It may include one or more of the following:
   - a monetary fine 
   - forfeiture of some number of stocks
-  - loss of one or more cards from the master plan pool
-  - loss of one or more cards from the run
-  - loss of one or more cards from the hand
+  - loss of one or more cards from the master plan resource stack
+  - loss of the player's current master plan card.
+  - loss of one or more cards from the player's plan.
+  - loss of one or more cards from the hand.
+  - player cannot buy or sell in the next turn.
+  - player cannot play any action in the next turn.
 
 
 ----- Cleanup
