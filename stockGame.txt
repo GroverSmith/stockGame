@@ -8,6 +8,7 @@ dirty insiders
 2d6+1 means roll 2 six sided dice and take the sum of the roll plus one.
 2d6+1d6/R means roll 2 six sided dice plus another six sided dice for every resource played.
 1/R means one per resource played as part of a master plan.
+Rd6 means roll a d6 for every resource played as part of a master plan.
 +1DD means gain one dirty deal token
 3DD+1/R means gain one dirty deal token plus one for every resource played.
 
@@ -46,6 +47,7 @@ dirty insiders
 
 -- news cards:
 * company buy-back: randomly select an entity (stock only). reduce number of available shares by 10*d6 and increase the price by 2d6. if there are insufficient shares in the market supply, players have the opportunity to immediately sell at the new price until the buyback amount is met (divide opportunity evenly between all share holders).
+* New stock offering: randomly select an entity (stock only). add 10*2d6 shares to the pool and reduce the price by 1d6+1
 
 ---- Buy/Sell/Trade
 * each player can buy/sell any amount of stock they have with the market
@@ -77,6 +79,9 @@ dirty insiders
 * frivolous lawsuit (scheme): select another player. that player may elect to settle out of court by giving you 3d6+1d6/R shares of a stock of your choice. If they do not settle, determine the court outcome by rolling 2D6. If the result is 9 or more, the player pays you (2d6+1d6/R)*10 shares of a stock of your choice and all stocks which the player is majority shareholder immediately fall in price by 2d6. Before the roll, the player may pay 10K cash (if they have it on hand) to hire a crack law firm to grant them one re-roll of the court decision.
 * shell corporation (scheme): +1DD. buy and sell any number of stocks during the next 2 insider trading phases without gaining any DD tokens.
 * price manipulation (scheme): +3DD. Select a stock for which you are the majority shareholder. Immediately adjust the price of that stock up or down by 5d6+1d6/R. 
+* plentiful resources (scheme): counts as +2R in the resouce pile.
+* risky resouce (scheme): when resolving a master plan, for each risky resource in the resource pile add 1d6-3R. This may result in a negative resouce amount. The total number of resources can never be less than zero. 
+* IPO (scheme): draw and resolve the top card of the entity deck, adding it to the market. You immediately gain Rd6 shares.
 
 * buy immunity (opportunity): you may immediately discard any number of DD tokens by paying 1d6*100 cash for each (roll once).
 * flee the country (opportunity): take no other action during your turn (no insider trading or any other action). Ignore any investigation that targets you this turn.
